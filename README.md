@@ -130,3 +130,90 @@ public class Main {
 **Funciones Internas:** El método calentarAgua es privado, lo que significa que solo puede ser llamado dentro de la clase Cafetera y no desde fuera.
 
 Así, el encapsulamiento protege la integridad de los datos internos de la cafetera y proporciona una interfaz clara y segura para interactuar con ella.
+
+
+
+## Polimorfismo
+### ¿Qué es el Polimorfismo🌀?
+El polimorfismo es un principio clave en la programación orientada a objetos que permite que una misma operación o método se comporte de manera diferente en distintas clases. En otras palabras, el polimorfismo nos permite usar una única interfaz para interactuar con diferentes tipos de objetos. Esto es especialmente útil para hacer el código más flexible y reutilizable.
+
+Para ilustrar esto con un ejemplo cotidiano, pensemos en un dispositivo multimedia que puede ser una radio, una televisión o un reproductor de música.
+
+**Ejemplo de Polimorfismo con Dispositivos Multimedia**
+
+__Imagina que tienes varios dispositivos para perder el tiempo en tu casa: una radio, una televisión y un reproductor de música. Todos estos dispositivos pueden "reproducir", pero cada uno lo hace a su manera.__
+
+
+![image](https://github.com/Andre230906/Java/assets/156432253/8f7d534b-0235-4cf6-8db0-96495d75c7c4)
+
+
+
+## ¿Cómo se aplica el Polimorfismo en este ejemplo?
+
+**Radio:** Reproduce estaciones de radio.
+
+**Televisión:** Reproduce canales de televisión.
+
+**Reproductor de Música:** Reproduce canciones.
+
+
+Todos estos dispositivos tienen una función común de "reproducir", pero cada uno la implementa de manera diferente.
+
+
+Ahora, llevemos este concepto al código:
+
+```
+// Clase base abstracta que define el método reproducir
+abstract class Dispositivo {
+    public abstract void reproducir();
+}
+
+// Clase Radio que extiende Dispositivo y sobrescribe el método reproducir
+class Radio extends Dispositivo {
+    @Override
+    public void reproducir() {
+        System.out.println("Reproduciendo la estación de radio...");
+    }
+}
+
+// Clase Television que extiende Dispositivo y sobrescribe el método reproducir
+class Television extends Dispositivo {
+    @Override
+    public void reproducir() {
+        System.out.println("Reproduciendo el canal de televisión...");
+    }
+}
+
+// Clase ReproductorDeMusica que extiende Dispositivo y sobrescribe el método reproducir
+class ReproductorDeMusica extends Dispositivo {
+    @Override
+    public void reproducir() {
+        System.out.println("Reproduciendo la canción...");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Crear instancias de los dispositivos
+        Dispositivo miRadio = new Radio();
+        Dispositivo miTelevision = new Television();
+        Dispositivo miReproductorDeMusica = new ReproductorDeMusica();
+
+        // Usar el mismo método reproducir en diferentes dispositivos
+        miRadio.reproducir();
+        miTelevision.reproducir();
+        miReproductorDeMusica.reproducir();
+    }
+}
+
+```
+
+## ¿Cómo se aplica el Polimorfismo en este ejemplo?
+
+***Clase Base Común:*** La clase Dispositivo define el método abstracto reproducir, que debe ser implementado por todas las clases derivadas.
+
+***Sobrescritura de Métodos:*** Las clases Radio, Television y ReproductorDeMusica sobrescriben el método reproducir para proporcionar su propia implementación específica.
+
+***Interfaz Común:*** A través de la clase base Dispositivo, podemos usar una interfaz común (reproducir) para interactuar con diferentes tipos de dispositivos multimedia.
+
+Gracias al polimorfismo, podemos tratar a diferentes objetos de manera uniforme, lo que simplifica el diseño del código y lo hace más flexible y fácil de mantener.
