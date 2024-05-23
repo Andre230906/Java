@@ -64,7 +64,7 @@ El encapsulamiento es un concepto fundamental en la programación orientada a ob
 
 Para ilustrar esto con un ejemplo cotidiano, pensemos en una cafetera.
 
-###Ejemplo de Encapsulamiento con una Cafetera
+### Ejemplo de Encapsulamiento con una Cafetera
 Imagina que tienes una cafetera en tu casa.
 
 
