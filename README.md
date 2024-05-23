@@ -124,6 +124,9 @@ public class Main {
 ```
 ## ¿Cómo se aplica el Encapsulamiento en este ejemplo?
 **Datos Privados:** Los atributos cantidadAgua y temperatura están encapsulados, es decir, son privados y no accesibles directamente desde fuera de la clase Cafetera.
+
 **Acceso Controlado:** Los métodos llenarAgua y prepararCafe son públicos y permiten interactuar con la cafetera de una manera controlada.
+
 **Funciones Internas:** El método calentarAgua es privado, lo que significa que solo puede ser llamado dentro de la clase Cafetera y no desde fuera.
+
 Así, el encapsulamiento protege la integridad de los datos internos de la cafetera y proporciona una interfaz clara y segura para interactuar con ella.
