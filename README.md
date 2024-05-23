@@ -18,6 +18,8 @@ Tenemos la clase libro:
 ![image](https://github.com/Andre230906/Java/assets/156432253/ceeff36b-2967-4940-851f-ecf6f79cfb19)
 
 y queremos crear la clase libro padre rico padre pobre
+
+
 ![image](https://github.com/Andre230906/Java/assets/156432253/83647330-8a8a-495b-973d-31510fdf04ac)
 
 
@@ -34,24 +36,25 @@ entonces en resumida cuentas la herencia es una plantilla de atributos que entre
 class Libro {
     String titulo;
     String autor;
-
+``
     // Constructor de la clase Libro
     public Libro(String titulo, String autor) {
         this.titulo = titulo;
         this.autor = autor;
     }
 }
-
-
+`
+``
 class PadreRicoPadrePobre extends Libro {
     String mensaje;
-
+``
     public PadreRicoPadrePobre(String titulo, String autor, String mensaje) {
         super(titulo, autor);
         this.mensaje = mensaje;
     }
 }
-
+``
 
 PadreRicoPadrePobre libroPadreRicoPadrePobre = new PadreRicoPadrePobre("Padre Rico, Padre Pobre", "Robert T. Kiyosaki", "Mensaje inspirador sobre finanzas personales y educación financiera.");
 `
+``
