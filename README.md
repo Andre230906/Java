@@ -32,7 +32,10 @@ entonces en resumida cuentas la herencia es una plantilla de atributos que entre
 **CODIGO**
 
 
-`
+```
+
+
+
 class Libro {
     String titulo;
     String autor;
@@ -49,5 +52,9 @@ class PadreRicoPadrePobre extends Libro {
     }
 }
 PadreRicoPadrePobre libroPadreRicoPadrePobre = new PadreRicoPadrePobre("Padre Rico, Padre Pobre", "Robert T. Kiyosaki", "Mensaje inspirador sobre finanzas personales y educación financiera.");
-`
+
+
+
+```
+
 
