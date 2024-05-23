@@ -36,25 +36,24 @@ entonces en resumida cuentas la herencia es una plantilla de atributos que entre
 class Libro {
     String titulo;
     String autor;
-``
+
     // Constructor de la clase Libro
     public Libro(String titulo, String autor) {
         this.titulo = titulo;
         this.autor = autor;
     }
 }
-`
-``
+
 class PadreRicoPadrePobre extends Libro {
     String mensaje;
-``
+
     public PadreRicoPadrePobre(String titulo, String autor, String mensaje) {
         super(titulo, autor);
         this.mensaje = mensaje;
     }
 }
-``
+
 
 PadreRicoPadrePobre libroPadreRicoPadrePobre = new PadreRicoPadrePobre("Padre Rico, Padre Pobre", "Robert T. Kiyosaki", "Mensaje inspirador sobre finanzas personales y educación financiera.");
 `
-``
+
