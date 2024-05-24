@@ -217,3 +217,81 @@ public class Main {
 ***Interfaz Común:*** A través de la clase base Dispositivo, podemos usar una interfaz común (reproducir) para interactuar con diferentes tipos de dispositivos multimedia.
 
 Gracias al polimorfismo, podemos tratar a diferentes objetos de manera uniforme, lo que simplifica el diseño del código y lo hace más flexible y fácil de mantener.
+
+
+
+## SOBRECARGA
+https://www.youtube.com/shorts/YmOerjz4bTA?feature=share
+
+### ¿Qué es la Sobrecarga🎛️?
+La sobrecarga es un concepto en la programación orientada a objetos que permite definir múltiples métodos con el mismo nombre pero con diferentes parámetros dentro de la misma clase. Esto facilita el uso del mismo nombre de método para realizar distintas tareas según los argumentos proporcionados, mejorando la legibilidad y la organización del código.
+
+### Para ilustrar esto con un ejemplo cotidiano, pensemos en un microwave (microondas).
+
+**Ejemplo de Sobrecarga con un Microondas**
+
+![image](https://github.com/Andre230906/Java/assets/156432253/ceddf92b-6f6c-4847-b69c-f1f936367228)
+
+
+Imagina que tienes un microondas en tu casa.
+
+
+El microondas puede calentar alimentos de diferentes maneras según el tipo de alimento y la cantidad de tiempo:
+
+**Calentar una bebida:** Definido por el tiempo y la potencia.
+**Calentar un plato de comida** Definido por el tiempo y el nivel de potencia.
+**Descongelar:** Definido por el peso del alimento.
+
+
+¿Cómo se aplica la Sobrecarga en este ejemplo?
+
+Podemos crear diferentes métodos calentar en la clase Microondas para manejar estos diferentes casos de uso.
+
+Ahora, llevemos este concepto al código:
+
+```
+public class Microondas {
+    // Método para calentar una bebida con tiempo y potencia predeterminados
+    public void calentar(int tiempo) {
+        System.out.println("Calentando bebida por " + tiempo + " segundos a potencia media.");
+    }
+
+    // Sobrecarga del método calentar para calentar un plato de comida con tiempo y nivel de potencia específicos
+    public void calentar(int tiempo, String potencia) {
+        System.out.println("Calentando comida por " + tiempo + " segundos a potencia " + potencia + ".");
+    }
+
+    // Sobrecarga del método calentar para descongelar basado en el peso del alimento
+    public void calentar(double peso) {
+        System.out.println("Descongelando " + peso + " kg de alimento.");
+    }
+
+    public static void main(String[] args) {
+        Microondas miMicroondas = new Microondas();
+        
+        // Usar los métodos sobrecargados
+        miMicroondas.calentar(30); // Calentar una bebida
+        miMicroondas.calentar(60, "alta"); // Calentar un plato de comida
+        miMicroondas.calentar(1.5); // Descongelar un alimento
+    }
+}
+
+
+```
+### ¿Cómo se aplica la Sobrecarga en este ejemplo?
+
+Mismo Nombre, Diferentes Firmas: Los métodos calentar tienen el mismo nombre pero diferentes listas de parámetros.
+
+**calentar(int tiempo):** Para calentar una bebida.
+
+**calentar(int tiempo, String potencia):** Para calentar un plato de comida.
+
+**calentar(double peso):** Para descongelar un alimento.
+
+**Facilita la Usabilidad:** Permite usar el método calentar de manera flexible según las necesidades, sin necesidad de recordar múltiples nombres de métodos diferentes.
+
+**Mejora la Organización:** Agrupa funcionalidad relacionada en métodos con el mismo nombre, lo que hace el código más legible y organizado.
+
+Con la sobrecarga, podemos simplificar la interfaz de nuestra clase y hacer que su uso sea más intuitivo, al permitir que un solo método maneje múltiples casos de uso.
+
+
