@@ -358,5 +358,153 @@ public class Main {
 Clase Abstracta: Vehiculo define los métodos esenciales sin implementar detalles.
 Implementación Concreta: Coche implementa los métodos abstractos.
 
+## Composición
+### ¿Qué es la Composición🧩?
+La composición es un principio en el que una clase está compuesta por uno o más objetos de otras clases, permitiendo la construcción de objetos complejos a partir de objetos más simples.
+
+Para ilustrar esto con un ejemplo cotidiano, pensemos en una computadora.
+
+Ejemplo de Composición con una Computadora
+Imagina que tienes una computadora.
+
+![image](https://github.com/Andre230906/Java/assets/156432253/dfd6d23a-bc05-45ea-bbba-00aa88b20c27)
+![image](https://github.com/Andre230906/Java/assets/156432253/9978f4e5-c9b1-44d8-80cf-9e968759fc6b)
 
 
+
+
+
+Una computadora está compuesta por varias partes:
+
+CPU
+Monitor
+Teclado
+¿Cómo se aplica la Composición en este ejemplo?
+
+Creamos una clase Computadora que incluye instancias de CPU, Monitor, y Teclado.
+
+```
+
+class CPU {
+    public void procesar() {
+        System.out.println("Procesando datos...");
+    }
+}
+
+class Monitor {
+    public void mostrar() {
+        System.out.println("Mostrando imagen...");
+    }
+}
+
+class Teclado {
+    public void escribir() {
+        System.out.println("Escribiendo texto...");
+    }
+}
+
+class Computadora {
+    private CPU cpu;
+    private Monitor monitor;
+    private Teclado teclado;
+
+    public Computadora() {
+        this.cpu = new CPU();
+        this.monitor = new Monitor();
+        this.teclado = new Teclado();
+    }
+
+    public void usar() {
+        cpu.procesar();
+        monitor.mostrar();
+        teclado.escribir();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Computadora miComputadora = new Computadora();
+        miComputadora.usar();
+    }
+}
+
+
+```
+
+### ¿Cómo se aplica la Composición en este ejemplo?
+Objetos Componentes: Computadora incluye CPU, Monitor y Teclado.
+Uso de Componentes: Computadora usa los métodos de sus componentes para realizar sus funcione
+
+## Modularidad
+### Qué es la Modularidad🔧?
+La modularidad es el diseño del software en módulos o componentes independientes y reutilizables. Cada módulo encapsula una funcionalidad específica y puede ser desarrollado, probado y mantenido de manera independiente.
+
+Para ilustrar esto con un ejemplo cotidiano, pensemos en una biblioteca.
+
+Ejemplo de Modularidad con una Biblioteca
+Imagina que tienes una biblioteca.
+
+
+![image](https://github.com/Andre230906/Java/assets/156432253/3da9be14-14ef-4c1b-b34f-4a4d5da627eb)
+
+
+
+Una biblioteca puede dividirse en módulos:
+
+Libros
+Revistas
+Periódicos
+¿Cómo se aplica la Modularidad en este ejemplo?
+Creamos módulos separados para Libro, Revista, y Periódico.
+
+```
+
+class Libro {
+    public void mostrarInfo() {
+        System.out.println("Información del libro...");
+    }
+}
+
+class Revista {
+    public void mostrarInfo() {
+        System.out.println("Información de la revista...");
+    }
+}
+
+class Periodico {
+    public void mostrarInfo() {
+        System.out.println("Información del periódico...");
+    }
+}
+
+class Biblioteca {
+    private Libro libro;
+    private Revista revista;
+    private Periodico periodico;
+
+    public Biblioteca() {
+        this.libro = new Libro();
+        this.revista = new Revista();
+        this.periodico = new Periodico();
+    }
+
+    public void mostrarInfo() {
+        libro.mostrarInfo();
+        revista.mostrarInfo();
+        periodico.mostrarInfo();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Biblioteca miBiblioteca = new Biblioteca();
+        miBiblioteca.mostrarInfo();
+    }
+}
+
+
+```
+
+### ¿Cómo se aplica la Modularidad en este ejemplo?
+Módulos Independientes: Libro, Revista, y Periodico son módulos independientes.
+Integración en Biblioteca: Biblioteca integra estos módulos y utiliza sus funcionalidades.
