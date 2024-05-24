@@ -294,4 +294,69 @@ Mismo Nombre, Diferentes Firmas: Los métodos calentar tienen el mismo nombre pe
 
 Con la sobrecarga, podemos simplificar la interfaz de nuestra clase y hacer que su uso sea más intuitivo, al permitir que un solo método maneje múltiples casos de uso.
 
+# ADICCIONALES
+## Abstracción
+### ¿Qué es la Abstracción🎨?
+
+La abstracción en la programación orientada a objetos consiste en resaltar los aspectos esenciales de un objeto y ocultar los detalles complejos innecesarios. En otras palabras, se trata de crear una representación simplificada del objeto.
+
+Para ilustrar esto con un ejemplo cotidiano, pensemos en un vehículo.
+
+Ejemplo de Abstracción con un Vehículo ( UN PODEROSISIMO TWINGO LOS FAVORITOS DE SHAKIRA )
+
+Imagina que tienes un vehículo.
+![image](https://github.com/Andre230906/Java/assets/156432253/2026ea9a-8a5d-4999-941b-04f7690ee4cb)
+
+
+Un vehículo tiene muchas partes y procesos internos, pero desde una perspectiva abstracta, solo te importa:
+
+**Encender**
+
+**Acelerar**
+
+**Frenar**
+
+¿Cómo se aplica la Abstracción en este ejemplo?
+
+Creamos una clase abstracta Vehiculo que define estos métodos esenciales.
+```
+abstract class Vehiculo {
+    public abstract void encender();
+    public abstract void acelerar();
+    public abstract void frenar();
+}
+
+class Coche extends Vehiculo {
+    @Override
+    public void encender() {
+        System.out.println("El coche está encendido.");
+    }
+    
+    @Override
+    public void acelerar() {
+        System.out.println("El coche está acelerando.");
+    }
+    
+    @Override
+    public void frenar() {
+        System.out.println("El coche está frenando.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Vehiculo miCoche = new Coche();
+        miCoche.encender();
+        miCoche.acelerar();
+        miCoche.frenar();
+    }
+}
+
+```
+
+**¿Cómo se aplica la Abstracción en este ejemplo?**
+Clase Abstracta: Vehiculo define los métodos esenciales sin implementar detalles.
+Implementación Concreta: Coche implementa los métodos abstractos.
+
+
 
